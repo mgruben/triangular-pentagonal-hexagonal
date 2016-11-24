@@ -27,6 +27,7 @@ void test() {
 }
 
 int main() {
-    test();
-    return 0;
+    int n = 286;
+    while (!isPent(triangle(n)) || !isHex(triangle(n))) n++;
+    cout << n << ": " << triangle(n) << endl;
 }
