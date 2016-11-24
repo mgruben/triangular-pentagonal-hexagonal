@@ -12,8 +12,18 @@ bool isPent(long long num) {
     return fmod(n_est, 1) == 0;
 }
 
+bool isHex(long long num) {
+    double n_est = (1 + sqrt(1+8*num)) / 4;
+    return fmod(n_est, 1) == 0;
+}
+
 void test() {
-    cout << triangle(285);
+    long long x = triangle(285);
+    cout << x << endl;
+    cout << isPent(x) << endl;
+    cout << isHex(x) << endl;
+    cout << isPent(x-1) << endl;
+    cout << isHex(x-1) << endl;
 }
 
 int main() {
